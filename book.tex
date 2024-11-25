@@ -1,0 +1,90 @@
+% !TEX TS-program = XeLaTeX
+\documentclass[12pt,twoside,svgnames,x11names]{book}
+
+\usepackage{lmodern}
+\usepackage{wallpaper}
+\usepackage{changepage}
+\usepackage[explicit,clearempty]{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning}
+\usepackage{lipsum}
+\usepackage[ISBN=978-80-85955-35-4]{ean13isbn}
+
+\usepackage[final]{pdfpages}
+\usepackage[french]{babel} %  language/hyphenation
+\usepackage[utf8]{inputenc}
+\usepackage{xpatch}
+%\usepackage{tocloft}
+\usepackage{geometry}
+\geometry{
+   paperwidth=148mm, paperheight=210mm,
+   left=28mm,  %% or inner=23mm
+   right=18mm, %% or outer=18mm
+   top=23mm, bottom=23mm,
+   headheight=\baselineskip,
+   headsep=7mm,
+   footskip=10mm
+}
+
+%\usepackage[margin=0.5in]{geometry}
+%%\usepackage{geometry}        
+%\geometry{a4paper}    
+%\usepackage[parfill]{parskip}  
+\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, 
+            citecolor=blue, urlcolor=blue]{hyperref}
+
+% Packages
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{multicol}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{0.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{exercise}{Exercise}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+\newtheorem{warning}{Warning}
+
+\def\grad{ \mbox{grad}}
+\def\curl{ \mbox{curl}}
+\def\div{ \mbox{div}}
+\def\U{\ensuremath {\cal U}}
+\def\S{\ensuremath {\cal S}}
+\def\V{\ensuremath {\cal V}}
+\def\R{\ensuremath {\cal R}}
+\def\tr{\ensuremath {\mbox{tr}}}
+
+
+
+
+% ------------------- Title and Author -----------------------------
+\title{My Photo Gallery}
+\author{Marc Augier}
+\date{}
+
+\begin{document}
+
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+
+\include{photo_gallery.tex}
+
+
+\end{document}
+\end
+
